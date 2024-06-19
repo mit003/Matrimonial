@@ -32,8 +32,7 @@ The Matrimonial project is a web application aimed at helping individuals find s
 ## Usage
   - Register a new account or log in with an existing account.
   - Create and update your profile with personal details and preferences.
-  - Use the search feature to find potential matches based on various filters.
   - View profiles of other users and express interest.
-  - Communicate with other users through the messaging system.
+  - Communicate with other users through the contract number.
 
 Thank you for using Matrimonial!
