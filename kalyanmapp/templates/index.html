@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+<head>
+<title>Home :: Kalyanam Metrimonial</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Kalayanam Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" /><!-- Bootstrap -->
+<link href=" {% static 'css/font-awesome.css' %} " rel="stylesheet"> <!-- Font awesome -->
+<link href=" {% static 'css/owl.carousel.css' %} " rel="stylesheet"><!-- Clients -->
+<link href=" {% static 'css/popuo-box.css' %} " rel="stylesheet" type="text/css" media="all" /><!-- Pop-up -->
+<link href=" {% static 'css/lsb.css' %} " rel="stylesheet" type="text/css"><!-- gallery -->
+<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
+<link href=" {% static 'css/rate.css' %} " rel="stylesheet" type="text/css" media="all" />
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+{% if messages %}
+        {% for msg in messages%}
+            <script>alert('{{ msg }}');</script>
+        {% endfor %}
+    {% endif %}
+<!--banner start here-->
+<div class="banner-w3ls" id="home">
+	<div class="container">
+		<!-- header -->
+                 <div class="header-inner">
+					 <h1><a href=" {% url 'index.html' %} "><img src="{% static 'images/logo.png' %}" style="width:10%;float:left;"></a></h1>
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- navbar-header -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href=" {% url 'index.html' %} " class="active">Home</a></li>
+									<li><a href=" {% url 'about.html' %} ">About</a></li>
+
+									<li><a href=" {% url 'contact.html' %} ">Contact</a></li>
+										{% if request.session.log_id %}
+									<li><a href=" {% url 'matches.html' %} ">Matches</a></li>
+									<li><a href=" {% url 'savelist.html' %} ">Savelist</a></li>
+							{% endif %}
+								</ul>
+							</div>
+							<div class="clearfix"> </div>	
+						</nav>
+						<div class="header-right-w3ls">
+							{% if request.session.log_id %}
+							<a href="/logout">Log out</a>
+							{% else %}
+							<a href=" {% url 'login.html' %} ">Log In</a>
+							{% endif %}
+
+							{% if request.session.log_id %}
+							<a href=" {% url 'profile.html' %} ">Profile</a>
+							{% else %}
+							<a href="{% url 'register.html' %}">Register</a>
+							{% endif %}
+						</div>
+						<div class="clearfix"></div>
+				</div>
+			<!-- //header -->
+			<!-- banner-slider -->
+			<div class="w3l_banner_info" >
+				<div class="slider">
+					<div class="callbacks_container">
+								<ul class="rslides" id="slider3">
+									<li>
+										<div class="w3ls-info">
+											 <h4>Be fabulous. Be empowered. Be Blown Away!</h4>
+											<p>We’re Committed to Service Excellence By Kalyanam.</p>
+										</div>
+
+									</li>
+									<li>
+										  <div class="w3ls-info">
+											<h4>Dream it. Believe it. make it happen! </h4>
+											<p>Checkout our list of best services and plan to best Finding.</p>
+										</div>
+
+									</li>
+									<li>
+										<div class="w3ls-info">
+											<h4>Be fabulous. Be empowered. Be Blown Away!</h4>
+											<p>Welcome to our Kalyanam - keep in touch with us...</p>
+										</div>
+
+									</li>
+
+								</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+        </div>
+</div>
+<!--//home-->
+<!--banner end here-->
+<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+		<div class="tittle-agileinfo">
+				<h3>Assisted Services</h3>
+			</div>
+			<div class="col-md-6 w3_agileits_services_grids">
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</div>
+						<h3>Search within reach</h3>
+					</div>
+				</div>
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-list-alt" aria-hidden="true"></i>
+						</div>
+						<h3>Shortlisted matches</h3>
+					</div>
+				</div>
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</div>
+						<h3>Initiate communication</h3>
+					</div>
+				</div>
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-users" aria-hidden="true"></i>
+						</div>
+						<h3>Meet the prospects</h3>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 regstr-r-w3-agileits">
+			<div class="form-bg-w3ls">
+				<h3 class="subhead-agileits white-w3ls">What's your thought about us??</h3>
+				<p class="para-agileits-w3layouts">Leave a feedback for us</p>
+				<form action="/addfeedback" method="post">
+					{% csrf_token %}
+					  <div class="rate">
+						<input type="radio" id="star5" name="rate" value="5" />
+						<label for="star5" title="text">5 stars</label>
+						<input type="radio" id="star4" name="rate" value="4" />
+						<label for="star4" title="text">4 stars</label>
+						<input type="radio" id="star3" name="rate" value="3" />
+						<label for="star3" title="text">3 stars</label>
+						<input type="radio" id="star2" name="rate" value="2" />
+						<label for="star2" title="text">2 stars</label>
+						<input type="radio" id="star1" name="rate" value="1" />
+						<label for="star1" title="text">1 star</label>
+ 					 </div>
+					<input type="text" name="comment" placeholder="Comment" required="">
+
+					<input type="submit" value="Submit" class="button-w3layouts hvr-rectangle-out">
+				</form>	
+			</div>
+			</div>
+		</div>
+	</div>
+<!-- //services -->
+
+<!-- about -->
+<div class="about-w3layouts" id="about">
+	<div class="tittle-agileinfo">
+				<h3>About Us</h3>
+			</div>
+	<div class="about-left-agileits">
+<!--		<div class="button">-->
+<!--			<a href="#small-dialog" class="play-icon popup-with-zoom-anim" ><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>-->
+<!--		</div>-->
+		<div id="small-dialog" class="mfp-hide w3ls_small_dialog wthree_pop">
+			<div class="agileits_modal_body">
+				<iframe src="https://player.vimeo.com/video/198296034"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="about-right">
+		<h3 class="subheading-agileits-w3layouts"><span>Kalyanam </span>Find Success Stories</h3>
+		<p class="para-agileits-w3layouts">It is important for the home, unless someone needs the leavening of the door of life. There is no such thing as now. But feugiat quam nec mauris mattis malesuada.</p>
+		<div class="sim-button button12">
+			{% if request.session.log_id %}
+			<a href=" {% url 'matches.html' %} ">View Profiles</a>
+			{% else %}
+			<a href="{% url 'login.html' %}">View Profiles</a>
+			{% endif %}
+		</div>
+	</div>
+	<div class="clearfix"> </div>
+</div>
+<!-- //about-bottom -->
+ <!--search-section -->
+ <div class="search-wthree">
+ <div class="container">
+	<h3 class="subheading-agileits-w3layouts">Start your journey with confidence.</h3>
+	<div class="sim-button button12">
+		{% if request.session.log_id %}
+		<a href=" {% url 'matches.html' %} ">Search Now</a>
+		{% else %}
+		<a href=" {% url 'login.html' %} ">Search Now</a>
+		{% endif %}
+	</div>
+	<div class="clearfix"> </div>
+ </div>
+  </div>
+  <!--//search-section -->
+ <!--middle-section -->
+<div class="middle-section-agileits-w3layouts">
+<div class="container">
+		<h3 class="subheading-agileits-w3layouts"><span>Kalyanam </span>Match</h3>
+		<p class="para-w3layouts">Exclusive Matchmaking Service for the Kalyanam Members</p>
+		<div class="sim-button button12"><a href=" {% url 'contact.html' %} ">Contact Us</a></div>
+</div>	
+</div>
+							 
+		
+
+					   </div>
+			</div>
+		</div>
+<!-- testimonials -->
+
+<!-- //testimonials -->
+ <!--/gallery-->
+	<div class="gallery" id="gallery">
+		<div class="tittle-agileinfo">
+			<h3>Together by Kalyanam</h3>
+		</div>
+			<ul id="flexiselDemo1">
+			<li>
+				<div class="wthree_gallery_grid">
+					<a href=" {% static 'images/g2.jpg' %} " class="lsb-preview" data-lsb-group="header">
+						<div class="view second-effect">
+							<img src=" {% static 'images/g2.jpg' %} " alt="" class="img-responsive" style="width:70%;"/>
+							<div class="mask">
+								<p>Vivek <i class="fa fa-heart-o" aria-hidden="true"></i> Ridhi</p>
+							</div>
+						</div>	
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="wthree_gallery_grid">
+					<a href=" {% static 'images/viket.jpg' %} " class="lsb-preview" data-lsb-group="header">
+						<div class="view second-effect">
+							<img src=" {% static 'images/viket.jpg' %} " alt="" class="img-responsive" style="width:72%" />
+							<div class="mask">
+								<p>Vicky <i class="fa fa-heart-o" aria-hidden="true"></i> Ketrina</p>
+							</div>
+						</div>	
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="wthree_gallery_grid">
+					<a href=" {% static 'images/kiyadh.jpg' %} " class="lsb-preview" data-lsb-group="header">
+						<div class="view second-effect">
+							<img src=" {% static 'images/kiyadh.jpg' %} " alt="" class="img-responsive" />
+							<div class="mask">
+								<p>Sidharth <i class="fa fa-heart-o" aria-hidden="true"></i> Kiara</p>
+							</div>
+						</div>	
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="wthree_gallery_grid">
+					<a href=" {% static 'images/alia.jpg' %} " class="lsb-preview" data-lsb-group="header">
+						<div class="view second-effect">
+							<img src=" {% static 'images/alia.jpg' %} " alt="" class="img-responsive" />
+							<div class="mask">
+								<p>Ranbir <i class="fa fa-heart-o" aria-hidden="true"></i> Alia</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+			<li>
+				<div class="wthree_gallery_grid">
+					<a href=" {% static 'images/athiya.jpg' %} " class="lsb-preview" data-lsb-group="header">
+						<div class="view second-effect">
+							<img src=" {% static 'images/athiya.jpg' %} " alt="" class="img-responsive" />
+							<div class="mask">
+								<p>Rahul <i class="fa fa-heart-o" aria-hidden="true"></i> Athiya</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+		</ul>
+
+
+	</div>
+
+<!--//gallery-->
+<!-- footer -->
+<div class="w3l_footer">
+		<div class="container">
+				<div class="w3ls_footer_grid">
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Location:</h4>
+							<p>Kalayanam Matrimonium, Nikol,<br> Ahemdabad, Gujrat</p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Contact us:</h4>
+							<p><span>Phone : </span>971-221-7218</p>
+							<p><span>Email : </span><a href="mailto:kalyanammarimony03@gmail.com">kalyanammarimony03@gmail.com</a></p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Opening hours:</h4>
+							<p>Working days (9am-9pm)</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- footer-button-info -->
+				<div class="footer-middle-agileinfo">
+					<div class="footer-button">
+					<div class="button-top-w3layouts">
+						<div class="logo-icons-w3ls">
+							<i class="fa fa-heart heart1" aria-hidden="true"></i>
+							<i class="fa fa-heart-o heart2" aria-hidden="true"></i>
+						</div>
+					</div>
+						<div class="sim-button button12"><a href=" {% url 'contact.html' %} ">Contact Us</a></div>
+						<h2>We’re Committed to Service Excellence.</h2>
+					</div>
+				</div>
+				<!-- footer-button-info -->
+		</div>
+</div>
+
+<div class="botttom-nav-agileits">
+	<ul>
+		<li><a href=" {% url 'index.html' %} ">Home</a></li>
+		<li><a href=" {% url 'about.html' %} ">About</a></li>
+		{% if request.session.log_id %}
+		<li><a href=" {% url 'matches.html' %} ">Matches</a></li>
+		{% endif %}
+		<li><a href=" {% url 'contact.html' %} ">Contact</a></li>
+	</ul>
+</div>
+<div class="footer-w3layouts">
+				<div class="container">
+				<div class="agileits-social">
+					<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+				</div>
+					<div class="clearfix"></div>
+				</div>
+</div>
+
+<!--/footer -->
+
+<!-- js -->
+<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<!-- flexisel -->
+		<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 4,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: { 
+					portrait: { 
+						changePoint:480,
+						visibleItems: 1
+					}, 
+					landscape: { 
+						changePoint:640,
+						visibleItems:2
+					},
+					tablet: { 
+						changePoint:768,
+						visibleItems: 2
+					}
+				}
+			});
+			
+		});
+	</script>
+	<script type="text/javascript" src=" {% static 'js/jquery.flexisel.js' %} "></script>
+<!-- //flexisel -->
+<!-- gallery-pop-up -->
+	<script src=" {% static 'js/lsb.min.js' %} "></script>
+	<script>
+	$(window).load(function() {
+		  $.fn.lightspeedBox();
+		});
+	</script>
+<!-- //gallery-pop-up -->
+<script src=" {% static 'js/SmoothScroll.min.js' %} "></script>
+<!--responsive slider -->
+<script src=" {% static 'js/responsiveslides.min.js' %} "></script>
+							<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 3
+								  $("#slider3").responsiveSlides({
+									auto: true,
+									pager:true,
+									nav:true,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+							
+								});
+							 </script>
+<!--//responsive slider -->
+<!--pop-up-box -->
+					<script src=" {% static 'js/jquery.magnific-popup.js' %} " type="text/javascript"></script>
+					<script>
+					$(document).ready(function() {
+					$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+					});
+
+					});
+					</script>
+<!-- //pop-up-box -->
+
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	
+	
+	<a href=" {% static '#home' %} " class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+	<!-- for-Clients -->
+		<script src=" {% static 'js/owl.carousel.js' %} "></script>
+			<!-- requried-jsfiles-for owl -->
+							        <script>
+									    $(document).ready(function() {
+									      $("#owl-demo2").owlCarousel({
+									        items : 1,
+									        lazyLoad : false,
+									        autoPlay : true,
+									        navigation : false,
+									        navigationText :  false,
+									        pagination : true,
+									      });
+									    });
+									  </script>
+			<!-- //requried-jsfiles-for owl -->
+	<!-- //for-Clients -->
+	<!-- start-smoth-scrolling -->
+<script type="text/javascript" src=" {% static 'js/move-top.js' %} "></script>
+<script type="text/javascript" src=" {% static 'js/easing.js' %} "></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src=" {% static 'js/bootstrap-3.1.1.min.js' %} "></script>
+	
+
+</body>
+</html>

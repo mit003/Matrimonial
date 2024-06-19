@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+<title>About | Kalyanam metrimony </title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Vivaah Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" />
+<link href=" {% static 'css/font-awesome.css' %} " rel="stylesheet"> 
+<link href=" {% static 'css/popuo-box.css' %} " rel="stylesheet" type="text/css" media="all" />
+<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<link href=" {% static 'css/rate.css' %} " rel="stylesheet" type="text/css" media="all" />
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+<!--banner start here-->
+<div class="banner-w3ls inner-banner-agileits" id="home">
+	<div class="container">
+		<!-- header -->
+
+                 <div class="header-inner">
+					 <h1><a href=" {% url 'index.html' %} "><img src="{% static 'images/logo.png' %}" style="width:10%;float:left;"></a></h1>
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- navbar-header -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href=" {% url 'index.html' %} " class="active">Home</a></li>
+									<li><a href=" {% url 'about.html' %} ">About</a></li>
+
+									<li><a href=" {% url 'contact.html' %} ">Contact</a></li>
+										{% if request.session.log_id %}
+									<li><a href=" {% url 'matches.html' %} ">Matches</a></li>
+							<li><a href=" {% url 'savelist.html' %} ">Savelist</a></li>
+							{% endif %}
+								</ul>
+							</div>
+							<div class="clearfix"> </div>
+						</nav>
+						<div class="header-right-w3ls">
+							{% if request.session.log_id %}
+							<a href="/logout">Log out</a>
+							<a href=" {% url 'profile.html' %} ">Profile</a>
+							{% else %}
+							<a href=" {% url 'login.html' %} ">Log In</a>
+							<a href=" {% url 'register.html' %} ">Register</a>
+							{% endif %}
+						</div>
+						<div class="clearfix"></div>
+				</div></div>
+</div>
+<!--//home-->
+<!--banner end here-->
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+   <div class="container">
+		<div class="w3l_agileits_breadcrumbs_inner">
+			<ul>
+				<li><a href=" {% url 'index.html' %} ">Home</a><span>&#187;</span></li>
+									
+				<li>About</li>
+				</ul>
+		</div>
+	</div>
+</div>
+<!-- //breadcrumbs -->
+<!--team-->
+			<section class="w3ls-team text-center">
+				<div class="container">
+					<div class="tittle-agileinfo">
+						<h3>Meet our team</h3>
+					</div>
+					<div class="team-row">
+						<div class="col-md-3 w3ls-team-grids">
+							<h5>Miss. joy</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
+							<div class="agileits-social">
+							</div>
+							<div class="team-img">
+								<img src=" {% static 'images/team1.jpg' %} " alt="">
+							</div>
+						</div>
+						<div class="col-md-3 w3ls-team-grids team-mdl">
+							<h5>Mr.Mit</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
+							<div class="agileits-social">
+							</div>
+							<div class="team-img">
+								<img src=" {% static 'images/mit.jpg' %} " alt="">
+						    </div>
+							<div class="clearfix"> </div>
+					    </div>
+						<div class="col-md-3 w3ls-team-grids team-mdl">
+							<h5>Mr. Johan</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
+							<div class="agileits-social">
+							</div>
+							<div class="team-img">
+								<img src=" {% static 'images/team2.jpg' %} " alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--//team-->
+
+
+<!-- about -->
+<div class="about-w3layouts" id="about">
+	<div class="tittle-agileinfo">
+				<h3>About Us</h3>
+			</div>
+	<div class="about-left-agileits">
+<!--		<div class="button">-->
+<!--			<a href=" {% static 'small-dialog' %} " class="play-icon popup-with-zoom-anim"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>-->
+<!--		</div>-->
+		<div id="small-dialog" class="mfp-hide w3ls_small_dialog wthree_pop">		
+			<div class="agileits_modal_body">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d58741.736436130566!2d72.5643261942182!3d23.04731379464567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d23.0352314!2d72.6275232!4m5!1s0x395e85f89eddcf3b%3A0x5e22c909fb193ce9!2sC%20U%20Shah%20Institute%20Of%20Computer%20Application%2C%20near%20gujarat%20vidhyapith%2C%20near%20income%20tax%20cross%20road%2C%20Ahmedabad%2C%20Gujarat%20380014!3m2!1d23.0402764!2d72.5693173!5e0!3m2!1sen!2sin!4v1645177449451!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="about-right">
+		<h3 class="subheading-agileits-w3layouts"><span>Find success story through </span>Kalyanam</h3>
+		<p class="para-agileits-w3layouts">To help you move closer to the desired outcome with convenience. To provide a safe progressive matchmaking platform. Offer new matchmaking future to make member expectations.</p>
+		<div class="sim-button button12">{% if request.session.log_id %}<a href=" {% url 'matches.html' %} ">{% endif %}View Profiles</a></div>
+	</div>
+	<div class="clearfix"> </div>
+	
+</div>
+<!-- //about-bottom -->
+ <!--search-section -->
+ <div class="search-wthree">
+ <div class="container">
+	<h3 class="subheading-agileits-w3layouts">Start your journey with confidence.</h3>
+	<div class="sim-button button12"><a href=" {% url 'matches.html' %} ">Search Now</a></div>
+	<div class="clearfix"> </div>
+ </div>
+  </div>
+  <!--//search-section -->
+ <!--middle-section -->
+<div class="middle-section-agileits-w3layouts">
+<div class="container">
+		<h3 class="subheading-agileits-w3layouts"><span>Kalyanam </span>Match</h3>
+		<p class="para-w3layouts">Exclusive Matchmaking Service for the Kalyanam Members</p>
+		<div class="sim-button button12"><a href=" {% url 'contact.html' %} ">Contact Us</a></div>
+</div>	
+</div>
+ <!--//middle-section -->
+<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+		<div class="tittle-agileinfo">
+				<h3>Assisted Services</h3>
+			</div>
+			<div class="col-md-6 w3_agileits_services_grids">
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</div>
+						<h3>Search within reach</h3>
+					</div>
+				</div>
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-list-alt" aria-hidden="true"></i>
+						</div>
+						<h3>Shortlisted matches</h3>
+					</div>
+				</div>
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</div>
+						<h3>Initiate communication</h3>
+					</div>
+				</div>
+				<div class="w3_agileits_services_grid">
+					<div class="w3_agileits_services_grid_agile">
+						<div class="w3_agileits_services_grid_1">
+							<i class="fa fa-users" aria-hidden="true"></i>
+						</div>
+						<h3>Meet the prospects</h3>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 regstr-r-w3-agileits">
+			<div class="form-bg-w3ls">
+				<h3 class="subhead-agileits white-w3ls">Interested in assisted services....?</h3>
+				<p class="para-agileits-w3layouts">Leave your details below, we'll call you back.</p>
+			<form action="/addfeedback" method="post">
+					{% csrf_token %}
+					  <div class="rate">
+						<input type="radio" id="star5" name="rate" value="5" />
+						<label for="star5" title="text">5 stars</label>
+						<input type="radio" id="star4" name="rate" value="4" />
+						<label for="star4" title="text">4 stars</label>
+						<input type="radio" id="star3" name="rate" value="3" />
+						<label for="star3" title="text">3 stars</label>
+						<input type="radio" id="star2" name="rate" value="2" />
+						<label for="star2" title="text">2 stars</label>
+						<input type="radio" id="star1" name="rate" value="1" />
+						<label for="star1" title="text">1 star</label>
+ 					 </div>
+					<input type="text" name="comment" placeholder="Comment" required="">
+
+					<input type="submit" value="Submit" class="button-w3layouts hvr-rectangle-out">
+				</form>	
+			</div>
+			</div>
+		</div>
+	</div>
+<!-- //services -->
+<!-- footer -->
+<div class="w3l_footer">
+		<div class="container">
+				<div class="w3ls_footer_grid">
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Location:</h4>
+							<p>Kalayanam Matrimonium, Nikol,<br> Ahemdabad, Gujrat</p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Contact us:</h4>
+							<p><span>Phone : </span>971-221-7218</p>
+							<p><span>Email : </span><a href=" {% static 'mailto:kalyanamatrimony03@gmail' %} ">kalyanamatrimony03@gmail.com</a></p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Opening hours:</h4>
+							<p>Working days (9am-9pm)</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- footer-button-info -->
+				<div class="footer-middle-agileinfo">
+					<div class="footer-button">
+					<div class="button-top-w3layouts">
+						<div class="logo-icons-w3ls">
+							<i class="fa fa-heart heart1" aria-hidden="true"></i>
+							<i class="fa fa-heart-o heart2" aria-hidden="true"></i>
+						</div>
+					</div>
+						<div class="sim-button button12"><a href=" {% url 'contact.html' %} ">Contact Us</a></div>
+						<h2>We’re Committed to Service Excellence.</h2>
+					</div>
+				</div>
+				<!-- footer-button-info -->
+		</div>
+</div>
+
+<div class="botttom-nav-agileits">
+	<ul>
+		<li><a href=" {% url 'index.html' %} ">Home</a></li>
+		<li><a href=" {% url 'about.html' %} ">About</a></li>
+		{% if request.session.log_id %}
+		<li><a href=" {% url 'matches.html' %} ">Matches</a></li>
+		{% endif %}
+		<li><a href=" {% url 'contact.html' %} ">Contact</a></li>
+	</ul>
+</div>
+<div class="footer-w3layouts">
+				<div class="container">
+				<div class="agileits-social">
+					<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+				</div>
+					<div class="clearfix"></div>
+				</div>
+</div>
+
+<!--/footer -->
+
+<!-- js -->
+<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}" ></script>
+
+
+<script src=" {% static 'js/SmoothScroll.min.js' %} "></script>
+<!--responsive slider -->
+<script src=" {% static 'js/responsiveslides.min.js' %} "></script>
+							<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 3
+								  $("#slider3").responsiveSlides({
+									auto: true,
+									pager:true,
+									nav:true,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+							
+								});
+							 </script>
+<!--//responsive slider -->
+<!--pop-up-box -->
+					<script src=" {% static 'js/jquery.magnific-popup.js' %} " type="text/javascript"></script>
+					<script>
+					$(document).ready(function() {
+					$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+					});
+
+					});
+					</script>
+<!-- //pop-up-box -->
+
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	
+	
+	<a href=" {% static '#home' %} " class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+	<!-- for-Clients -->
+		<script src=" {% static 'js/owl.carousel.js' %} "></script>
+			<!-- requried-jsfiles-for owl -->
+							        <script>
+									    $(document).ready(function() {
+									      $("#owl-demo2").owlCarousel({
+									        items : 1,
+									        lazyLoad : false,
+									        autoPlay : true,
+									        navigation : false,
+									        navigationText :  false,
+									        pagination : true,
+									      });
+									    });
+									  </script>
+			<!-- //requried-jsfiles-for owl -->
+	<!-- //for-Clients -->
+	<!-- start-smoth-scrolling -->
+<script type="text/javascript" src=" {% static 'js/move-top.js' %} "></script>
+<script type="text/javascript" src=" {% static 'js/easing.js' %} "></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src=" {% static 'js/bootstrap-3.1.1.min.js' %} "></script>
+	
+
+</body>
+</html>

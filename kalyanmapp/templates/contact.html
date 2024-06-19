@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+<title>Contact :: Kalyanam Metrimony</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Vivaah Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" />
+<link href=" {% static 'css/font-awesome.css' %} " rel="stylesheet"> 
+<link href=" {% static 'css/easy-responsive-tabs.css' %} " rel='stylesheet' type='text/css'/>
+<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+<!--banner start here-->
+<div class="banner-w3ls inner-banner-agileits" id="home">
+	<div class="container">
+		<!-- header -->
+
+                 <div class="header-inner">
+					 <h1><a href=" {% url 'index.html' %} "><img src="{% static 'images/logo.png' %}" style="width:10%;float:left;"></a></h1>
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- navbar-header -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href=" {% url 'index.html' %} " class="active">Home</a></li>
+									<li><a href=" {% url 'about.html' %} ">About</a></li>
+
+									<li><a href=" {% url 'contact.html' %} ">Contact</a></li>
+										{% if request.session.log_id %}
+									<li><a href=" {% url 'matches.html' %} ">Matches</a></li>
+							<li><a href=" {% url 'savelist.html' %} ">Savelist</a></li>
+							{% endif %}
+								</ul>
+							</div>
+							<div class="clearfix"> </div>
+						</nav>
+						<div class="header-right-w3ls">
+							{% if request.session.log_id %}
+							<a href="/logout">Log out</a>
+							<a href=" {% url 'profile.html' %} ">Profile</a>
+							{% else %}
+							<a href=" {% url 'login.html' %} ">Log In</a>
+							<a href=" {% url 'register.html' %} ">Register</a>
+							{% endif %}
+						</div>
+						<div class="clearfix"></div>
+				</div>
+</div>
+</div>
+<!--//home-->
+<!--banner end here-->
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+   <div class="container">
+		<div class="w3l_agileits_breadcrumbs_inner">
+			<ul>
+				<li><a href=" {% url 'index.html' %} ">Home</a><span>&#187;</span></li>
+									
+				<li>Contact</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //breadcrumbs -->
+<div class="login elite-app contact-page">
+	<div class="container">
+	<div class="tittle-agileinfo">
+				<h3>Contact</h3>
+
+			</div>
+			<div class="col-md-6 regstr-r-w3-agileits">
+
+			<div class="form-bg-w3ls">
+{% if messages %}
+        {% for msg in messages%}
+            <div class="alert alert-{{ msg.tags }}" role="alert">
+                <strong>{{ msg }}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+				<h3 class="subhead-agileits white-w3ls">Contact Form</h3>
+				<form action="/insertcontact" method="post">
+					{% csrf_token %}
+					<input type="text" name="Name" placeholder="Name" required="">
+					<input type="email" name="Email" placeholder="Email" required="">
+					<input type="text" name="Subject" placeholder="Subject" required="">
+					<textarea name="Message" placeholder="Message" required=""></textarea>
+					<input type="submit" value="Submit" class="button-w3layouts hvr-rectangle-out">
+				</form>	
+			</div>
+			</div>
+			<div class="col-md-6 contact-agileits-w3layouts">
+				<div id="horizontalTab">
+						<ul class="resp-tabs-list">
+						<li>
+							<h6>Ahemdabad</h6>
+						</li>
+						<li>
+							<h6>Surat</h6>
+						</li>
+						<li>
+							<h6>Mumbai</h6>
+						</li>
+						<li>
+							<h6>Rajkot</h6>
+						</li>
+						</ul>
+						<div class="resp-tabs-container">
+						<div class="tab1">
+							<p class="para-agileits-w3layouts"><span>Location : </span>Ahemdabad</p>
+							<p class="para-agileits-w3layouts"><span>Call Us : </span>505-606-5432</p>
+							<p class="para-agileits-w3layouts"><span>Email : </span><a href=" {% static 'mailto:info@example.com' %} ">info@example.com</a></p>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.25792023775!2d72.43965638232845!3d23.020181763437073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1645867587187!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+						
+						<div class="tab2">
+							<p class="para-agileits-w3layouts"><span>Location : </span>Surat</p>
+							<p class="para-agileits-w3layouts"><span>Call Us : </span>032-625-4592</p>
+							<p class="para-agileits-w3layouts"><span>Email : </span><a href=" {% static 'mailto:info@example.com' %} ">info@example.com</a></p>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.54141360881!2d72.7522557484411!3d21.15918573906277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1645867683785!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+						<div class="tab3">
+							<p class="para-agileits-w3layouts"><span>Location : </span>Mumbai</p>
+							<p class="para-agileits-w3layouts"><span>Call Us : </span>077-961-5426</p>
+							<p class="para-agileits-w3layouts"><span>Email : </span><a href=" {% static 'mailto:info@example.com' %} ">info@example.com</a></p>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609859002!2d72.74109963251524!3d19.082197839337027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645867847887!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+						<div class="tab4">
+							<p class="para-agileits-w3layouts"><span>Location : </span>Rajkot</p>
+							<p class="para-agileits-w3layouts"><span>Call Us : </span>505-792-2654</p>
+							<p class="para-agileits-w3layouts"><span>Email : </span><a href=" {% static 'mailto:info@example.com' %} ">info@example.com</a></p>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.81619358873!2d70.75125586958325!3d22.273471934512735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1645867903006!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+						</div>
+				</div>
+			</div>
+	</div>
+</div>
+<!--login-inner-->
+<!-- footer -->
+<div class="contact-page-w3-agile">
+	<div class="tittle-agileinfo">
+				<h3>Find Us</h3>
+			</div>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.550351087159!2d72.56712861489093!3d23.040276384944125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f89eddcf3b%3A0x5e22c909fb193ce9!2sC%20U%20Shah%20Institute%20Of%20Computer%20Application!5e0!3m2!1sen!2sin!4v1645867968415!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>	
+<div class="w3l_footer">
+		<div class="container">
+				<div class="w3ls_footer_grid">
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Location:</h4>
+							<p>Kalayanam Matrimonium, Nikol,<br> Ahemdabad, Gujrat</p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Contact us:</h4>
+							<p><span>Phone : </span>971-221-7218</p>
+							<p><span>Email : </span><a href=" {% static 'mailto:kalianammarimony03@gmail.com' %} ">kalianammarimony03@gmail.com</a></p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Opening hours:</h4>
+							<p>Working days (9am-9pm)</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- footer-button-info -->
+				<div class="footer-middle-agileinfo">
+					<div class="footer-button">
+					<div class="button-top-w3layouts">
+						<div class="logo-icons-w3ls">
+							<i class="fa fa-heart heart1" aria-hidden="true"></i>
+							<i class="fa fa-heart-o heart2" aria-hidden="true"></i>
+						</div>
+					</div>
+						<div class="sim-button button12"><a href=" {% static 'contact.html' %} ">Contact Us</a></div>
+						<h2>We’re Committed to Service Excellence.</h2>
+					</div>
+				</div>
+				<!-- footer-button-info -->
+		</div>
+</div>
+
+<div class="botttom-nav-agileits">
+	<ul>
+		<li><a href=" {% url 'index.html' %} ">Home</a></li>
+		<li><a href=" {% url 'about.html' %} ">About</a></li>
+		{% if request.session.log_id %}
+		<li><a href=" {% url 'matches.html' %} ">Matches</a></li>
+		{% endif %}
+		<li><a href=" {% url 'contact.html' %} ">Contact</a></li>
+	</ul>
+</div>
+<div class="footer-w3layouts">
+				<div class="container">
+				<div class="agileits-social">
+					<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				</div>
+					<div class="clearfix"></div>
+				</div>
+</div>
+
+<!--/footer -->
+
+<!-- js -->
+<script type='text/javascript' src=" {% static 'js/jquery-2.2.3.min.js' %} "></script>
+<!-- script for responsive tabs -->						
+<script src=" {% static 'js/easy-responsive-tabs.js' %} "></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!-- script for responsive tabs -->		
+
+
+<script src=" {% static 'js/SmoothScroll.min.js' %} "></script>
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	
+	
+	<a href=" {% static '#home' %} " class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+	<!-- //for-Clients -->
+	<!-- start-smoth-scrolling -->
+<script type="text/javascript" src=" {% static 'js/move-top.js' %} "></script>
+<script type="text/javascript" src=" {% static 'js/easing.js' %} "></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src=" {% static 'js/bootstrap-3.1.1.min.js' %} "></script>
+	
+
+</body>
+</html>

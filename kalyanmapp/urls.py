@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index,name="index.html"),
+    path('about', views.about,name="about.html"),
+    path('contact', views.contactus,name="contact.html"),
+    path('insertcontact', views.insertcontactus,name="insertcontact"),
+    path('loginpage', views.loginpage,name="login.html"),
+    path('register', views.register,name="register.html"),
+    path('biodata', views.showbidata),
+    path('biodata2', views.showbidata2,name='biodata2.html'),
+    path('biodata3', views.showbidata3,name='biodata3.html'),
+    path('addbiodata', views.insertbiodata,name='biodata.html'),
+    path('viewdata', views.viewdata),
+    path('addfeedback', views.addfeedback),
+    path('checkuser', views.checklogin, name='checkuser'),
+    path('logout', views.logout, name='logout'),
+    path('matches', views.matches,name="matches.html"),
+    path('savelist', views.savelistpage,name="savelist.html"),
+    path('profile', views.profile,name="profile.html"),
+    path('forgot password', views.forgot,name="forgot_password.html"),
+    path('forgotpass', views.forgotpass),
+    path('changepass', views.changepass,name="change_password.html"),
+    path('save/<int:id>', views.saveid),
+    path('getmail/<int:id>', views.getmail),
+    path('viewperson/<int:id>', views.viewperson),
+    path('edit/<int:id>', views.editbiodata),
+    path('updatebiodata/<int:id>', views.updatebiodata),
+]
