@@ -10,7 +10,7 @@ Welcome to the Matrimonial project! This repository contains the codebase for a 
 
 ## Introduction
 
-The Matrimonial project is a web application aimed at helping individuals find suitable life partners. Users can create profiles, search for matches, and communicate with potential partners through the platform. The application focuses on providing a secure and user-friendly environment for matrimonial purposes.
+The Matrimonial project is a web application aimed at helping individuals find suitable life partners. Users can create profiles, search for matches, and communicate with potential partners through the contact number. The application focuses on providing a secure and user-friendly environment for matrimonial purposes.
 
 ## Features
 
